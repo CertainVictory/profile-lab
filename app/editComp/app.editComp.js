@@ -2,19 +2,22 @@
 
 const editComp = {
     template: `
-    <form class="temp-box" ng-submit="$ctrl.addNew($ctrl.profiledata)">
-    <p>USE FORM BELOW TO </p>
-    <p>Name</p>
+    <section class="flexus-edit">
+    <form class="edit-content" ng-submit="$ctrl.addNew($ctrl.profiledata)">
+    <p class="form-title">Use form below to update your profile.</p>
+    
+    <p class="title-style">Name</p>
     <input type="text" ng-model="$ctrl.profiledata.name" placeholder="">
 
-    <p>Contact</p>
+    <p class="title-style">Contact</p>
     <input type="text" ng-model="$ctrl.profiledata.contact" placeholder="">
 
-    <p>bio</p>
-    <input type="text" ng-model="$ctrl.profiledata.bio" placeholder="">
-    <a href="#!/profile">Add Things</a>
+    <p class="title-style">Bio</p>
+    <input class="big-input" type="text" ng-model="$ctrl.profiledata.bio" placeholder="">
+    <button>Update</button>
 
     </form>
+    </section>
     `,
     controller: ["profileService", function(profileService) {
         const vm = this;

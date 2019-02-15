@@ -3,9 +3,9 @@
 function profileService($location) {
     const self = this;
     self.profiledata = {
-        name: `frlkjf`,
-        contact: '555-3333',
-        bio: `hecking floofer`
+        name: `Ducks Debuggington`,
+        contact: 'duckdebug@gmail.com',
+        bio: `I'm Ducks Debuggington and I'll help you out of a bind`
     }
     self.editProfile = function() {
         $location.path("/edit-profile")
